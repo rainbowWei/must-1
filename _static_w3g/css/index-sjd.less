@@ -1,0 +1,477 @@
+@import 'reset.less';
+
+// 头部
+header{
+    width: 6.7rem;
+    height: 1rem;
+    padding: 0 .4rem;
+    // background-color: #262626;
+    .a_box{
+        width: 1.64rem;
+        height: .72rem;
+        background: url(../images/logo.png);
+        background-size: 100% 100%;
+        margin-top: .13rem;
+        
+    }
+    .fill-in i{
+        
+        color: #fff;
+        float: right;
+        margin-top: .25rem;
+        width:.44rem;
+        height:.44rem;
+        color:#333;
+        font-size: .4rem;
+        
+    }
+    .users{
+        display:block;
+        width:.6rem;
+        height:.6rem;
+        border-radius:50%;
+        float:right;
+        margin-top:.14rem;
+        position:relative;
+        background: url(../images/head.jpg);
+        background-size: 100% 100%;
+        span{
+            display:none;
+            width:100px;
+            background-color:#3C4A55;
+            position:absolute;
+            right:0;
+            z-index:400;
+            top:.8rem;
+            i{
+                display:block;
+                color:#3C4A55;
+                font-size:12px;
+                margin-top:-8px;
+                margin-left:70px;
+            }
+        }
+    }
+}
+
+// 内容部分
+
+
+#MyDiv{
+    display:none;
+}
+#submit {
+    display: none;
+  }
+#ti{
+    display: none;   
+}
+#sait{
+    display: none;
+  }
+#results{
+    display: none;
+}
+.content{
+    width:100%;
+    height:11rem;
+    background: url(../images/beijing.png) no-repeat;
+    background-size: 100% 100%;
+    padding-top: .89rem;
+
+    // 基本信息
+    .info{
+        margin: 0 auto;
+        width: 6.20rem;
+        height: 9rem;
+        background-color: #ffffff;
+        border-radius: .10rem;
+        position: relative;
+        .info-tit{
+            width: 5.08rem;
+            height: .63rem;
+            background: url(../images/title.png);
+            background-size: 100% 100%;
+            position: absolute;
+            top:.34rem;
+            left:.5rem;
+        }
+        .info-con{
+            width:4.97rem;
+            height:6.58rem;
+            position: absolute;
+            top:.6rem;
+            left:.62rem;
+            li{
+                padding-left: .28rem;
+                margin-bottom: .23rem;
+                height:.46rem;
+                &:last-child{
+                    padding-left: 0rem;  
+                }
+                i{
+                    color: red;
+                  }
+                span{
+                font-size: .3rem;
+                line-height: 17px;         
+                color: #3a3a3a; 
+                } 
+                input{
+                    width: 2.8rem;
+                    height: .46rem;
+                    background-color: #e5f9fe;
+                    border-radius: .06rem;
+                    border: solid .02rem #7ee0fa;
+                    opacity: 0.9;
+                    font-size: .24rem;
+                }
+                textarea{
+                    width: 4.96rem;
+                    height: 1.90rem;
+                    background-color: #e5f9fe;
+                    border-radius: .10rem;
+                    border: solid .02rem #7ee0fa;
+                    opacity: 0.9;
+                    font-size: .24rem;
+                }
+            }
+           
+        }
+        .info-footer{
+            height:.6rem;
+            width:4.97rem;
+            position: absolute;
+            bottom: .2rem;
+            left:.62rem;
+            li{
+                width: 2rem;
+                height: .60rem;
+                background-color: #7bc610;
+                border-radius: .30rem;
+                font-size: .30rem;
+                font-weight: normal;
+                font-stretch: normal;
+                line-height: .60rem;
+                letter-spacing: .07rem;
+                text-align: center;
+                color: #fefefe;
+                float: left;
+            }
+            #submit2{
+                 
+                background-color: #e52631;
+                margin-left: .94rem;
+            }
+        }
+    }
+  
+    //开始测试弹窗
+    .white_content {
+        position: absolute;
+        top:3.65rem;
+        left:50%;
+        margin-left: -3.1rem;
+        width: 6.2rem;
+        height: 5.24rem;
+        background-color: #ffffff;
+        z-index:1002;
+        overflow: auto;
+        .close{
+        width: .40rem;
+        height: .40rem;
+        background: url(../images/guanbi.png);
+        background-size: 100% 100%;
+        position: absolute;
+        top:0;
+        right:0;
+        }
+        .bg{
+        width: 2.35rem;
+        height: 2.05rem;
+        background: url(../images/icon.png);
+        background-size: 100% 100%;
+        position: absolute;
+        top:.80rem;
+        left:1.96rem;
+        }
+        .text{
+        position: absolute;
+        top:3.10rem;
+        left:1.68rem; 
+        font-size: .30rem;
+        line-height: .17rem;
+        color: #e52631;
+        }
+        #test{
+            width: 6.2rem;
+            height: 1rem;
+        background: url(../images/botton.png);
+        background-size: 100% 100%;
+        font-size: .40rem;
+        line-height: 1rem;
+        letter-spacing: .02rem;
+        color: #fcdc39;
+        text-align: center;
+        display: block;
+        position: absolute;
+        left:0;
+        bottom: 0;
+        }
+        .text2{
+        left:.63rem; 
+        }
+        .loading{
+        width: .97rem;
+        height: .97rem;
+        background: url(../images/loading.gif);
+        background-size: 100% 100%;
+        position: absolute;
+        bottom:.62rem;
+        left:2.63rem;
+        }
+        .bg2{
+        background: url(../images/icon_1.png);
+        background-size: 100% 100%;
+        }
+    }
+     // 测试题页面
+    .test{
+        width:6.20rem;
+        height:7.5rem;
+        position: absolute;
+        top:1.72rem;
+        left:50%;
+        margin-left: -3.1rem;
+        background-color: #ffffff;
+        border-radius: .10rem;
+        .test-tit{
+            width: 5.08rem;
+            height: .63rem;
+            background: url(../images/title.png);
+            background-size: 100% 100%;
+            position: absolute;
+            top:.34rem;
+            left:.5rem;
+        }
+        .ti-con{
+        position: absolute;
+        top:1.92rem;
+        left: .61rem;
+        width:5.2rem;
+        .timu{
+            font-size: .28rem;
+            line-height: .40rem;
+            color: #3a3a3a;
+        }
+        .timu-con{
+            margin: .57rem 0 0 .39rem;
+            font-size: .28rem;
+            line-height: .17rem;
+            color: #3a3a3a;
+            font-weight: bold;
+            li{
+            margin-bottom: .19rem;
+            i{
+                width:.24rem;
+                height:.24rem;
+                margin-right: .13rem;
+                display: inline-block;
+                background: url(../images/radio2.png);
+                background-size: 100% 100%;
+            }
+            
+            }
+            .show {
+                i{
+                    width:.24rem;
+                    height:.24rem;
+                    background: url(../images/radio.png) no-repeat;
+                    background-size: 100% 100%;
+                }
+            }
+        }
+        .button{
+            margin-top: .75rem;
+            position: relative;
+            li{
+            position: absolute;
+            top:0;
+            width: 1.80rem;
+            height: .6rem;
+            line-height: .6rem;
+            text-align: center;
+            background-color: #e52631;
+            font-size: .30rem;
+            letter-spacing: 0.02rem;
+            cursor: pointer;
+            color: #fefefe;
+            }
+            #prev{
+                 left:0rem;
+                 display: none;
+            }
+            #next{
+                left:3.2rem
+            }
+            #submit{
+                width: 2.51rem;
+                color: #fcdc39;
+                display: none;
+                left:2.47rem;
+            }
+            }
+        }
+    }
+    //等待结果弹窗添加到开始测试弹窗
+
+
+  //测试结果页面
+
+  .test-results{
+    position: absolute;
+    top:1.72rem;
+    left:50%;
+    margin-left:-3.07rem; 
+    width: 6.14rem;
+	height: 8.83rem;
+    background: url(../images/beijing_1.png);
+    background-size: 100% 100%;
+    .testre-con{
+      width:4.97rem;
+      height:100%;
+      margin: 0 auto;
+      position: relative;
+      .tit{
+        font-size: .49rem;
+        font-weight: bold;
+        line-height: .45rem;
+        color: #fcdc39;
+        position: absolute;
+        top:.85rem;
+        left:0;
+      }
+      .scores{
+        position: absolute;
+        top:1.77rem;
+        left:.25rem;
+        font-size: .32rem;
+        font-weight: bold;
+        line-height: .45rem;
+        color: #e52631;
+        .line{
+          display: inline-block;
+          width: 1.30rem;
+          height: .39rem;
+          border-bottom: .02rem solid #e52631;
+          text-align: center;
+        }
+      }
+      .test-content{
+        width:4.95rem;
+        height:3.7rem;
+        position: absolute;
+        top:2.3rem;
+        left:0rem;
+        font-size: .22rem;
+        line-height: .36rem;
+        text-indent: .38rem;
+        p{
+          font-weight: bold;
+        }
+      }
+      ul{
+        position: absolute;
+        bottom: .45rem;
+        left:0rem;
+        width:4.95rem;
+        height: 1.50rem;
+
+        .ewm{
+          background: url(../images/ewm.png);
+          background-size: 100% 100%;
+          width: 1.54rem;
+          height: 1.54rem;
+          position: absolute;
+          bottom: .68rem;
+          left:0;
+        }
+        .more{
+          font-size: .20rem;
+          font-weight: bold;
+          line-height: .45rem;
+          color: #636363;
+          position: absolute;
+          bottom: .24rem;
+          left:0;
+        }
+        .close{
+          width: 1.60rem;
+          height: .50rem;
+          background-color: #e52631;
+          font-size: .26rem;
+          line-height: .50rem;
+          letter-spacing: .08rem;
+          text-align: center;
+          margin-top: .60rem;
+          cursor: pointer;
+          position: absolute;
+          bottom: .24rem;
+          right:0;
+          a{
+              width:100%;
+              height:100%;
+              display: inline-block;
+              color: #fefefe;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+// footer部分
+.nav_list{
+    width:7.5rem;
+    height:.8rem;
+    padding: .08rem 0 .1rem 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    border: .01rem solid #e5e5e5;
+}
+.nav_list ul li{
+    float: left;
+    text-align: center;
+    width: 25%;
+    color: #656565;
+    padding-top: .02rem;
+    p{
+        color: #656565;
+        font-size: .26rem;
+        position: absolute;
+        bottom: 0;
+        left:50%;
+        margin-left: -.25rem;
+    }
+    .icon{
+        font-size: .46rem;
+        height: .44rem;
+        width:.44rem;
+        color: #656565;
+        position: absolute;
+        top:0rem;
+        left:50%;
+        margin-left: -.22rem
+    }
+    a{
+        display: block;
+        height:.85rem !important;
+        position: relative;
+    }
+}
+.on{
+    color: #00BED4;
+}

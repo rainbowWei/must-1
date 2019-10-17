@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MUST快速筛查表</title>
+    
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href=".//_static_w3g/css/public.css">
+    <script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+    <script src="./_static_w3g/js/header_footer.js"></script>  
+    <script type="text/javascript" src="./js/index.js"></script>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="top">
+        <div class="header_new2">
+            <div class="top1">
+                <div class="top1img">
+                    <a href="http://www.xingxiwang.net/"></a>
+                </div>
+    
+                <div class="nav">
+                    <ul>
+                        <li class="active">
+                            <a href="http://www.xingxiwang.net" target="_self">首页</a>
+                        </li>                        
+                        <li>
+                            <a href="javascript:;" target="_self">课程</a>
+                            <!-- <span class="course-class">
+                                <a href="http://www.xingxiwang.net/course.html?vtype=1" target="_self">点播</a>
+                                <a href="http://www.xingxiwang.net/course.html?vtype=2" target="_self">直播</a>
+                                <a href="http://www.xingxiwang.net/album.html" target="_self">班级</a>
+                                <a href="http://www.xingxiwang.net/lineclass.html" target="_self">线下</a>                            
+                            </span>                         -->
+                        </li>                        
+                        <!-- <li>
+                            <a href="http://www.xingxiwang.net/exam.html" target="_self">在线测试</a>
+                        </li>                         -->
+                        <li>
+                            <a href="http://www.xingxiwang.net/teacher.html" target="_self">名师</a>
+                        </li>                        
+                        <li>
+                            <a href="http://www.xingxiwang.net/vip.html" target="_self">会员</a>
+                        </li>                        
+                        <li>
+                            <a href="javascript:;" target="_self">更多</a>
+                            <span class="course-class">
+                                <a href="http://www.xingxiwang.net/mall.html" target="_self">商城</a>
+                                <!-- <a href="http://www.xingxiwang.net/card_receipt/coupon.html" target="_self">卡券</a> -->
+                                <a href="http://www.xingxiwang.net/news.html" target="_self">资讯</a>
+                                <a href="http://www.xingxiwang.net/question.html" target="_self">问答</a>
+                                <!-- <a href="http://www.xingxiwang.net/library.html" target="_self">资料</a>                            -->
+                            </span>                       
+                        </li>               
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="top3">
+                <!--消息提示-->
+                <ul class="news-msg" style="display:none;">
+                    <a class="shanchu-ico" href="javascript:;" onclick="closeMsg(this)">×</a>
+                </ul>
+    
+                <div class="search_index" style="border-radius: 4px;">
+                    <div class="search_index_val">
+                        <p>课程</p><i></i>
+                        <span>
+                            <a href="javascript:void(0)" attr="course">课程</a>
+                            <a href="javascript:void(0)" attr="teacher">讲师</a>
+                        </span>
+                        <input value="video" id="search_cate" type="hidden" disabled="">
+                    </div>
+                    <p class="bd_right"></p>
+                    <input type="text" id="search_combo_input" placeholder="搜索课程">
+                    <i class="search_start" id="btn_search_site"></i>
+                </div>
+                
+                <div class="nav1">
+                    <div class="look_scanning">
+                        <i></i>
+                        <div class="ewm">
+                            <div class="h5">
+                                <div id="nav_h5_qrcode"><img style="display: block;" width="86" height="86" src="http://www.xingxiwang.net/index.php?app=basic&amp;mod=Qrcode&amp;act=index&amp;config[content]=http%3A%2F%2Fwww.xingxiwang.net&amp;config[print]=1" data-bd-imgshare-binded="1"></div>
+                                <p>手机网页端</p>
+                            </div>
+                            <div class="app">
+                                <div id="nav_app_qrcode"><img src="http://www.xingxiwang.net/index.php?app=basic&amp;mod=Qrcode&amp;act=index&amp;config[content]=https%3A%2F%2Fwww.pgyer.com%2F5RDd%3Fversion%3D1.0&amp;config[print]=1" data-bd-imgshare-binded="1"></div>
+                                <p>APP下载</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="page_header_adiv">
+                        <li><a href="http://www.xingxiwang.net/login.html">登录</a></li>
+                        <li style="line-height: 80px;">丨</li>
+                        <li><a href="http://www.xingxiwang.net/register.html">注册</a></li>
+                    </ul>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+    <!-- 基本信息页面 -->
+    <div class="bg">
+        <div  class="info" id="info">
+            <div class="info-tit"></div>
+            <ul class="info-con">
+                <li><span>家长姓名 <i>*</i>&nbsp;</span><input type="text" id="parentName"></li>
+                <li><span>孩子姓名 <i>*</i>&nbsp;</span><input type="text" id="childName"></li>
+                <li><span>孩子年龄 <i>*</i>&nbsp;</span><input type="text" id="childAge"></li>
+                <li><span>孩子性别 <i>*</i>&nbsp;</span><input type="text" id="childSex"></li>
+                <li><span>联系方式 <i>*</i>&nbsp;</span><input type="text" id="contact"></li>
+                <li><span>居住地址 <i>*</i>&nbsp;</span><input type="text" id="address"></li>
+                <li>
+                    <span id="jz"> 孩子目前存在的问题 <i>*</i></span>
+                    <textarea id="problem"></textarea>
+                </li>
+            </ul>
+            <ul class="info-footer">
+                <li id="reset">重置</li>
+                <li id="submit2">提交</li>
+            </ul>
+
+        </div>
+
+        <!-- 开始测试弹窗 -->
+        <div id="MyDiv" class="white_content">
+            <div onclick="CloseDiv('info','MyDiv')" class="close"></div>
+            <div class="bg"></div>
+            <div class="text">您的信息已成功提交！</div>
+            <a id="test" onclick="ShowDiv('ti','MyDiv')" href="javascript:">开始测评</a>
+        </div>
+
+        <!-- 测试题页面 -->
+        <div id="ti"  class="test">
+            <div class="test-tit"></div>
+            <div class="ti-con">
+                <div class="timu">
+                    1.已知，题目一
+                </div>
+                <ul class="timu-con">
+                    <li><i></i><span>A. </span><span>答案A</span></li>
+                    <li><i></i><span>B. </span><span>答案A</span></li>
+                    <li><i></i><span>C. </span><span>答案A</span></li>
+                    <li><i></i><span>D. </span><span>答案A</span></li>
+                </ul>
+                <div class="button">
+                    <li id="prev">上一题</li>
+                    <li id="next">下一题</li>
+                    <li id="submit">测试完成提交</li>
+                </div>
+            </div>
+        </div>
+
+        <!-- 等待结果弹窗 -->
+        <div  class="white_content" id="sait">         
+            <div class="bg bg2"></div>
+            <div class="text text2">您的测试已提交，请耐心等待结果......</div>
+            <div class="loading"></div>
+        </div>
+
+        <!-- 测试结果页面 -->
+        <div class="test-results" id="results">
+            <div class="testre-con">
+                <div class="tit">测试结果</div>
+
+                <div class="scores">您本次测试得分总数：<i class="line">22</i></div>
+                <div class="test-content">
+                    <p>孩子目前患有自闭症的可能性很大。</p>    
+                    <div>虽说宝宝偶尔的不理人不爱说话属于正常现象。但如果这个
+                    行为长期来没有得到改善，即使和父母、幼儿园的小伙伴在一起
+                    也不见好转，那就要注意了。Ta很少眼神对视、不会表达需求，
+                    不关注周围，注意力涣散,甚至还有一些刻板行为等，孩子也缺乏
+                    理解力和想象力，他的行为表现跟同龄孩子相比差异颇大。这些
+                    行为似乎已经打乱了你们家的正常生活了，时常让你焦虑不安。
+                    该怎么办呢？掌握正确的康复技术，进行高强度的康复训练吧！</div>
+                </div>
+                <ul>
+                    <li class="ewm"></li>
+                    <li class="more">更多资讯请关注我们官方微信</li>
+                    <li class="close"><a href="http://www.xingxiwang.net/">关闭</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>  
+    
+    <!-- footer部分 -->
+    <div class="post-service yensen">
+        <div class="other-service">
+                <div class="service-class ">
+                    <a href="javascript:;"><span>新手指南</span></a>
+                    <a target="_blank" href="http://www.xingxiwang.net/single/6.html">如何注册</a>
+                    <a target="_blank" href="http://www.xingxiwang.net/single/7.html">如何购买</a>
+                    <a target="_blank" href="http://www.xingxiwang.net/single/8.html">如何学习</a>
+                    <a target="_blank" href="http://www.xingxiwang.net/my/set_up/info.html">账户设置</a>                
+                </div>
+                <div class="service-class">
+                    <a href="javascript:;"><span>帮助中心</span></a>
+                    <a target="_blank" href="http://www.xingxiwang.net/repwd.html">找回密码</a>
+                    <a target="_blank" href="http://www.xingxiwang.net/single/9.html">在线支付</a>
+                    <a target="_blank" href="http://www.xingxiwang.net/single/10.html">银行汇款</a>
+                    <a target="_blank" href="http://www.xingxiwang.net/single/11.html">开发票事宜</a>
+                    <a target="_blank" href="https://www16.53kf.com/webCompany.php?kf_sign=DE4ODMTUzOEyNTEwMzUxNDk3MTU4MDAz&arg=10182209&style=1">在线帮助</a>                
+                </div>
+                <div class="service-class" >
+                    <a href="javascript:;"><span>用户中心</span></a>
+                    <a target="_blank" href="http://www.xingxiwang.net/login.html">我的课程</a>
+                    <a target="_blank" href="http://www.xingxiwang.net/my/question.html">我的问答</a>
+                    <a target="_blank" href="http://www.xingxiwang.net/my/order.html">我的订单</a>                
+                </div>
+                <div class="service-class">
+                    <a href="javascript:;"><span>关于星希望</span></a>
+                    <a target="_blank" href="http://www.xingxiwang.net/single/12.html">企业简介</a>
+                    <a target="_blank" href="http://www.xingxiwang.net/single/13.html">联系我们</a>
+                    <a target="_blank" href="http://www.xingxiwang.net/single/14.html">市场合作</a>               
+                 </div>
+                 <div class="service-class">
+                    <a href="javascript:;"><span>掌上学习</span></a>
+                    <a target="_blank" href="javascript:;">
+                        移动端
+                        <!-- <div class="ydd"></div> -->
+                    </a>
+                    <a target="_blank" href="javascript:;">
+                        星希望公众微信端
+                        <!-- <div class="wxd"></div> -->
+                    </a>
+                    <a target="_blank" href="https://www.pgyer.com/KZYK">
+                        Android客户端
+                        <!-- <div class=" Android"></div> -->
+                    </a>
+                    <a target="_blank" href="https://www.pgyer.com/KBs5">
+                        iPhone客户端
+                        <!-- <div class="iPhone"></div> -->
+                    </a>               
+                 </div>          
+                <div class="tel-box">
+                    <div class="tel-icon">
+                        <img src="./images/gzh-ewm.jpg" alt="">
+                    </div>
+                    <div class="week">关注官方微信</div>
+                </div>
+            </div>
+            <div class="copyright-box">
+                Copyright 2015 @ 北京星希望孤独症康复中心版权所有 京ICP备12007218号-1        
+            </div>
+    </div>
+    <script>
+        function ShowDiv(show_div,bg_div){
+            document.getElementById(show_div).style.display='block';
+            document.getElementById(bg_div).style.display='none';
+        };
+        //关闭弹出层
+      
+        function CloseDiv(show_div,bg_div){
+            document.getElementById(show_div).style.display='block';
+            document.getElementById(bg_div).style.display='none';
+        };
+    </script>
+</body>
+</html>
